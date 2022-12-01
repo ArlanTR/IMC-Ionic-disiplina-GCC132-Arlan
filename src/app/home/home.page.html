@@ -10,12 +10,12 @@
 
   <ion-item>
     <ion-label position="fixed">Peso (kg)</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="weight"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="fixed">Altura (m)</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="height"></ion-input>
   </ion-item>
 
   <ion-button expand="block" class="ion-margin-top" (click)="onCalculate()">
