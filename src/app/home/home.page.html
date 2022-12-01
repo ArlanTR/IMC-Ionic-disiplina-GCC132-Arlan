@@ -8,18 +8,26 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-item>
-    <ion-label position="fixed">Peso (kg)</ion-label>
-    <ion-input type="number" [(ngModel)]="weight"></ion-input>
-  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-lg="4" offset-lg="4">
+        <ion-item>
+          <ion-label position="fixed">Peso (kg)</ion-label>
+          <ion-input type="number" [(ngModel)]="weight"></ion-input>
+        </ion-item>
 
-  <ion-item>
-    <ion-label position="fixed">Altura (m)</ion-label>
-    <ion-input type="number" [(ngModel)]="height"></ion-input>
-  </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Altura (m)</ion-label>
+          <ion-input type="number" [(ngModel)]="height"></ion-input>
+        </ion-item>
 
-  <ion-button color="dark" expand="block" class="ion-margin-top" (click)="onCalculate()">
-    Calcular
-  </ion-button>
+        <ion-button color="dark" expand="block" class="ion-margin-top" (click)="onCalculate()">
+          Calcular
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 
 </ion-content>
