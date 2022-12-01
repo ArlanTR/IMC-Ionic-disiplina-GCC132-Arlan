@@ -15,6 +15,10 @@ export class HomePage {
   constructor(private toastCtrl: ToastController) {}
 
   onCalculate() {
+    if (this.height <= 0 || this.weight <= 0) {
+      return
+    }
+    
     this.imc = this.weight / (this.height * this.height)
     this.showIMC()
   }
@@ -23,7 +27,7 @@ export class HomePage {
     const toast = await this.toastCtrl.create({
       message: `IMC = ${this.imc.toFixed(2)}`,
       duration: 3000,
-      position: 'top'
+      color: 'secondary'
     })
     
     toast.present()
